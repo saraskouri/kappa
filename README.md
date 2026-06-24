@@ -71,7 +71,8 @@ Kappa is built on the **P‑E‑A Framework** (Perceived Exaggerated Amplificati
 | Badge + Card | Expert Mode |
 |--------------|-------------|
 | *<img width="1094" height="584" alt="image" src="https://github.com/user-attachments/assets/b7643004-fc95-4b8f-81a1-1a9a099cbea4" />
-* | ** |
+* | *<img width="1047" height="525" alt="image" src="https://github.com/user-attachments/assets/0c1a4336-127a-426a-a236-c5e02fe8f162" />
+* |
 
 ---
 
