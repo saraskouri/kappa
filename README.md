@@ -32,8 +32,8 @@ Kappa is built on the **P‑E‑A Framework** (Perceived Exaggerated Amplificati
 
 | Framework | Domain | Status |
 |-----------|--------|--------|
-| P‑E‑A (2025) | Social media algorithms | Published |
-| P‑E‑A Operationalized (2025) | Computational score + interventions | Published |
+| P‑E‑A (2025) | Social media algorithms | SSRN preprint  |
+| P‑E‑A Operationalized (2025) | Computational score + interventions | SSRN preprint |
 | CDI + PROD (2026) | Large Language Models | SSRN preprint |
 
 **Key formulas:**
