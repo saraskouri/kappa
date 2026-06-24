@@ -1,0 +1,39 @@
+Here's a practical breakdown of your actual options — organized by how accessible they are given your specific situation (Morocco-based, independent, no institutional affiliation):
+
+---
+
+**Realistically accessible to you**
+
+**Cooperative AI Foundation grants** — they explicitly state that affiliation is not required, degrees are not strictly required, and you can be located anywhere in the world. They have an early-career track for junior independent researchers. This is your most directly applicable option.
+
+**OpenAI Mental Health Research Grants** — targeted research grants between $5,000 and $100,000, supporting researchers outside of OpenAI. Narrower in topic but worth watching for future calls.
+
+**Anthropic AI for Science Program** — individuals are eligible (must be 18+), no institutional affiliation required. Awards API credits rather than cash, but removes one major cost barrier.
+
+---
+
+**Accessible with caveats**
+
+**NEH Fellowships (AI & Humanities)** — independent scholars may apply for support to research and write about AI through NEH's Fellowships or Public Scholars opportunities. Heavily US-oriented but worth checking eligibility.
+
+**Anthropic Economic Futures** — offers $10,000–$50,000 in research funding plus Claude API credits, and they explicitly want to partner with independent research institutions to grow the AI economic research ecosystem. Relevant if your AI research intersects labor/economic questions.
+
+---
+
+**Not accessible as an individual (but worth knowing)**
+
+**Anthropic Fellows Program** — open to independent researchers, but requires work authorization in the US, UK, or Canada. Rules you out for now.
+
+**IDRC/FCDO AI4D Africa grants** — large funding (up to CAD 1M), but individual researchers are not eligible; you'd need to be part of an institutional team.
+
+---
+
+**Strategic advice for your situation specifically**
+
+The institutional affiliation problem is real and recurring. Two ways around it:
+
+1. **Fiscal sponsorship**: organizations like Open Collective or NUMFOCUS can act as your institutional host for grant applications, for a small fee. This is how many unaffiliated researchers in the Global South access funding.
+
+2. **Build a visible track record first**: publishing on arXiv (which you're already planning), engaging the quantum foundations community, and building a public research profile makes you fundable even without a university. Your physics paper, once submitted and ideally accepted, directly strengthens any grant application.
+
+For AI specifically — what's your research direction? Safety, foundations, social impacts? That would narrow down which of these is the best fit to pursue first.

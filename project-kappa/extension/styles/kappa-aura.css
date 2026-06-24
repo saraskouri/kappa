@@ -1,0 +1,291 @@
+/* ───────────────────────────────────────────────
+   Kappa Aura Design System
+   ─────────────────────────────────────────────── */
+
+/* ── Colour Palette ─────────────────────────── */
+:root {
+  --kappa-terracotta: #D4734B;
+  --kappa-deep-clay: #8B4513;
+  --kappa-sahara-gold: #C8963E;
+  --kappa-savanna-green: #5B8C51;
+  --kappa-sunset-red: #C7503E;
+  --kappa-warm-ivory: #FDF6EC;
+  --kappa-dark-earth: #2C2416;
+  --kappa-cool-stone: #8C8C7C;
+
+  --kappa-aura-green: rgba(91, 140, 81, 0.45);
+  --kappa-aura-amber: rgba(200, 150, 62, 0.45);
+  --kappa-aura-red: rgba(199, 80, 62, 0.45);
+
+  --kappa-card-bg: rgba(253, 246, 236, 0.92);
+  --kappa-card-border: rgba(200, 150, 62, 0.25);
+  --kappa-card-shadow-sm: 0 4px 24px rgba(44, 36, 22, 0.08);
+  --kappa-card-shadow-lg: 0 16px 48px rgba(44, 36, 22, 0.05);
+
+  --kappa-radius: 16px;
+  --kappa-transition-slow: 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --kappa-transition-medium: 0.3s ease;
+}
+
+/* ── Dark Mode ──────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --kappa-card-bg: rgba(30, 26, 20, 0.92);
+    --kappa-card-border: rgba(200, 150, 62, 0.15);
+    --kappa-warm-ivory: #F5EDE0;
+    --kappa-dark-earth: #E8DCC8;
+    --kappa-cool-stone: #A09480;
+    --kappa-card-shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --kappa-card-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ── Breathing Aura Keyframes ───────────────── */
+@keyframes kappa-breathe-green {
+  0%, 100% { box-shadow: 0 0 18px rgba(91,140,81,0.45), 0 0 50px rgba(91,140,81,0.1); }
+  50%      { box-shadow: 0 0 28px rgba(91,140,81,0.65), 0 0 72px rgba(91,140,81,0.2); }
+}
+@keyframes kappa-breathe-amber {
+  0%, 100% { box-shadow: 0 0 18px rgba(200,150,62,0.45), 0 0 50px rgba(200,150,62,0.1); }
+  50%      { box-shadow: 0 0 28px rgba(200,150,62,0.65), 0 0 72px rgba(200,150,62,0.2); }
+}
+@keyframes kappa-breathe-red {
+  0%, 100% { box-shadow: 0 0 18px rgba(199,80,62,0.45), 0 0 50px rgba(199,80,62,0.1); }
+  50%      { box-shadow: 0 0 28px rgba(199,80,62,0.65), 0 0 72px rgba(199,80,62,0.2); }
+}
+
+/* ── Base Badge ──────────────────────────────── */
+#kappa-badge {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: rgba(253, 246, 236, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 0.5px solid rgba(200, 150, 62, 0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  z-index: 99999 !important;
+  transition: background 1.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Aura states - applied directly to #kappa-badge */
+#kappa-badge.aura-green {
+  animation: kappa-breathe-green 3s infinite ease-in-out !important;
+  background: rgba(91, 140, 81, 0.15) !important;
+}
+
+#kappa-badge.aura-amber {
+  animation: kappa-breathe-amber 3s infinite ease-in-out !important;
+  background: rgba(200, 150, 62, 0.15) !important;
+}
+
+#kappa-badge.aura-red {
+  animation: kappa-breathe-red 3s infinite ease-in-out !important;
+  background: rgba(199, 80, 62, 0.15) !important;
+}
+
+#kappa-badge.aura-paused {
+  animation: none !important;
+  box-shadow: 0 0 8px rgba(140,140,124,0.3) !important;
+  background: rgba(140,140,124,0.25) !important;
+}
+
+/* ── Card Container ──────────────────────────── */
+#kappa-card {
+  position: fixed !important;
+  bottom: 80px !important;
+  right: 24px !important;
+  width: 300px !important;
+  max-height: 420px !important;
+  background: var(--kappa-card-bg) !important;
+  backdrop-filter: blur(22px) !important;
+  -webkit-backdrop-filter: blur(22px) !important;
+  border: 0.5px solid var(--kappa-card-border) !important;
+  border-radius: var(--kappa-radius) !important;
+  box-shadow: var(--kappa-card-shadow-sm), var(--kappa-card-shadow-lg) !important;
+  padding: 16px !important;
+  z-index: 99998 !important;
+  overflow-y: auto !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  color: var(--kappa-dark-earth) !important;
+  animation: kappa-card-rise 0.35s ease !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+@keyframes kappa-card-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Card Header ─────────────────────────────── */
+.kappa-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.kappa-card-header .kappa-logo {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--kappa-terracotta);
+}
+.kappa-card-close,
+.kappa-card-gear {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--kappa-cool-stone);
+  transition: color 0.2s;
+}
+.kappa-card-close:hover,
+.kappa-card-gear:hover { color: var(--kappa-dark-earth); }
+
+/* ── Verdict Row ─────────────────────────────── */
+.kappa-verdict {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.kappa-verdict-icon { font-size: 22px; }
+
+/* ── Plain‑language rows ─────────────────────── */
+.kappa-insight {
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.kappa-insight summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--kappa-deep-clay);
+  list-style: none;
+}
+.kappa-insight summary::-webkit-details-marker { display: none; }
+.kappa-insight .details-content {
+  margin-top: 4px;
+  color: var(--kappa-cool-stone);
+  font-size: 12px;
+}
+
+/* ── Scores (Balanced / Expert) ──────────────── */
+.kappa-scores {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--kappa-cool-stone);
+}
+
+/* ── Buttons ──────────────────────────────────── */
+.kappa-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--kappa-terracotta);
+  color: var(--kappa-warm-ivory);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.kappa-btn:hover { background: var(--kappa-deep-clay); transform: translateY(-1px); }
+.kappa-btn:active { transform: scale(0.97); }
+
+/* ── Onboarding Overlay ──────────────────────── */
+#kappa-onboarding {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(20, 16, 10, 0.5) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 100000 !important;
+  animation: kappa-fade-in 0.5s ease !important;
+}
+@keyframes kappa-fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.kappa-onboarding-card {
+  background: var(--kappa-card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 0.5px solid var(--kappa-card-border);
+  border-radius: var(--kappa-radius);
+  padding: 28px 24px;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: var(--kappa-card-shadow-lg);
+}
+.kappa-onboarding-card h2 {
+  font-size: 20px;
+  color: var(--kappa-terracotta);
+  margin-bottom: 8px;
+}
+.kappa-onboarding-card p {
+  font-size: 13px;
+  color: var(--kappa-cool-stone);
+  margin-bottom: 18px;
+}
+
+/* Mode selection cards */
+.kappa-mode-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 16px 0 20px;
+}
+.kappa-mode-card {
+  background: rgba(255,255,255,0.4);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 12px 8px;
+  width: 90px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.kappa-mode-card:hover { transform: scale(1.03); }
+.kappa-mode-card.selected {
+  border-color: var(--kappa-sahara-gold);
+  box-shadow: 0 0 12px rgba(200,150,62,0.3);
+}
+.kappa-mode-card .mode-icon { font-size: 24px; }
+.kappa-mode-card .mode-title { font-weight: 600; font-size: 13px; margin: 6px 0 2px; }
+.kappa-mode-card .mode-desc { font-size: 10px; color: var(--kappa-cool-stone); }
+
+/* ── Tooltip (first‑time mode tip) ──────────── */
+.kappa-tooltip {
+  position: fixed;
+  bottom: 78px;
+  right: 78px;
+  background: var(--kappa-card-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 0.5px solid var(--kappa-sahara-gold);
+  border-radius: 12px;
+  padding: 12px 14px;
+  max-width: 220px;
+  font-size: 11px;
+  color: var(--kappa-dark-earth);
+  box-shadow: var(--kappa-card-shadow-sm);
+  z-index: 100001;
+  animation: kappa-card-rise 0.3s ease;
+}
+
+/* ── Utility ──────────────────────────────────── */
+.kappa-hidden { display: none !important; }

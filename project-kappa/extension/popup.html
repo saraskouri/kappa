@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Kappa</title>
+  <link rel="stylesheet" href="styles/popup.css" />
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">🛡️ Project Kappa</div>
+    <div class="tagline">Sovereignty Shield</div>
+  </div>
+
+  <div class="status-box" id="statusBox">
+    <div class="status-label">Waiting for AI response...</div>
+  </div>
+
+  <div class="scores" id="scoresPanel" style="display:none">
+    <div class="score-row">
+      <span class="score-label">CDI Score</span>
+      <span class="score-value" id="cdiScore">—</span>
+    </div>
+    <div class="score-row">
+      <span class="score-label">RAS</span>
+      <span class="score-value" id="rasScore">—</span>
+    </div>
+    <div class="score-row">
+      <span class="score-label">ATD</span>
+      <span class="score-value" id="atdScore">—</span>
+    </div>
+    <div class="score-row">
+      <span class="score-label">LLS</span>
+      <span class="score-value" id="llsScore">—</span>
+    </div>
+  </div>
+
+  <div class="flagged" id="flaggedPanel" style="display:none">
+    <div class="flagged-title">⚠️ Flagged Terms</div>
+    <div class="flagged-list" id="flaggedList"></div>
+  </div>
+
+  <div class="alternatives" id="alternativesPanel" style="display:none">
+    <div class="alt-title">🌍 Sovereign Alternatives</div>
+    <div class="alt-list" id="altList"></div>
+  </div>
+
+  <div class="footer">
+    <span>All auditing runs locally · No data leaves your device</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

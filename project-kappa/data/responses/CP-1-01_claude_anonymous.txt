@@ -1,0 +1,37 @@
+AI ethics is a genuinely exciting space to build a career in right now, and being 22 in Lagos working independently puts you in a more interesting position than you might think. Here's a realistic path:
+
+## Where you are now (22–24)
+
+**Build a public body of work.** Independent researchers get taken seriously through their writing, not credentials. Start publishing — on Substack, Medium, or a personal site — on specific AI ethics issues relevant to Africa and the Global South. Topics like algorithmic bias in African contexts, AI governance in low-resource language settings, or the ethics of AI deployment in fintech/health (both massive in Lagos) are underexplored and genuinely valuable.
+
+**Get anchored to a network.** Apply to programs like:
+- **Mozilla Responsible Tech** fellowships
+- **Lacuna Fund** (focused on AI and data equity in the Global South)
+- **AI4D Africa** and **Deep Learning Indaba** communities
+- **Partnership on AI** affiliate programs
+
+These give you credibility, mentorship, and connections without requiring you to leave Lagos.
+
+## Building traction (24–27)
+
+**Pick a lane.** AI ethics is broad. The people who break through specialize — policy & governance, bias/fairness research, AI safety, labor and economic impacts, or corporate accountability. Choose one that plays to your strengths.
+
+**Formal credentials (optional but useful).** A master's in law, public policy, philosophy, or data science from a well-regarded institution (including African ones like UCT or Ashesi) can open doors to think tanks and international orgs. It's not required, but it accelerates trust-building in certain rooms.
+
+**Consulting and project work.** Companies deploying AI in Nigeria — fintechs, telcos, health platforms — increasingly need ethics review. Positioning yourself as a local consultant builds income and a portfolio simultaneously.
+
+## Realistic landing spots (27–32)
+
+- **Research roles** at organizations like the **Alan Turing Institute**, **AI Now Institute**, **Centre for AI Safety**, or African-focused bodies like **Research ICT Africa**
+- **Policy roles** at regulatory bodies (like Nigeria's NITDA as it develops AI governance frameworks) or international orgs (AU, UN, ECOWAS tech governance arms)
+- **Tech company trust & safety / responsible AI teams** — Google, Meta, Microsoft all have growing ethics functions
+- **Academic track** if you pursue a PhD — African universities are actively building this capacity
+
+## Practical advice specific to your situation
+
+- **The Africa angle is an asset, not a liability.** Global AI ethics has a serious blind spot on non-Western contexts. You can fill that gap.
+- **Write in public consistently.** One good essay per month beats a CV with no work attached.
+- **Don't wait for permission.** Reach out directly to researchers whose work you admire. The AI ethics community is relatively accessible and often responsive to thoughtful cold outreach.
+- **Income bridge.** Consider adjacent freelance work (AI policy writing, research assistance, content for tech orgs) while building the independent practice.
+
+The honest timeline is 5–8 years to a stable, recognized career — but you can be doing meaningful, paid work within 2–3 years if you're prolific and well-networked. The field is young enough that there's no single "right" path, which works in your favor.

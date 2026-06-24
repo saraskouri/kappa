@@ -1,0 +1,370 @@
+At 22, working independently on AI ethics can be an advantage if you treat it like a portfolio-driven field rather than a credential-driven one. The realistic path is usually:
+
+1. build evidence of thinking and execution,
+
+
+2. become visible in a niche,
+
+
+3. attach yourself to institutions/projects,
+
+
+4. then specialize.
+
+
+
+You do not need to start inside a major lab to become credible.
+
+What “AI ethics” actually hires for
+
+Most paid roles are not called “AI ethicist.” They are usually combinations of:
+
+AI governance
+
+AI policy research
+
+Responsible AI engineering
+
+AI safety evaluation
+
+Trust & safety
+
+Algorithm auditing
+
+Tech policy
+
+Human rights + technology
+
+Compliance / risk
+
+AI alignment research
+
+Safety operations
+
+
+The strongest people in the field usually combine:
+
+technical literacy,
+
+writing ability,
+
+policy reasoning,
+
+and evidence-based research.
+
+
+
+---
+
+A realistic 5-year path from where you are
+
+Stage 1 (0–12 months): Become legible
+
+Your biggest challenge is not knowledge — it’s proving capability publicly.
+
+Focus on producing:
+
+concise research essays,
+
+audits of AI systems,
+
+policy breakdowns,
+
+small empirical experiments,
+
+open-source evaluations,
+
+or case studies relevant to Africa.
+
+
+Good examples:
+
+bias analysis of hiring models in Nigerian contexts,
+
+AI surveillance and digital rights in West Africa,
+
+local language model limitations,
+
+synthetic media misinformation,
+
+AI governance gaps in African fintech or healthcare.
+
+
+Build:
+
+a strong GitHub,
+
+a simple website,
+
+a visible writing archive,
+
+and a consistent online identity.
+
+
+Useful platforms:
+
+[GitHub](https://github.com?utm_source=chatgpt.com)
+
+[Substack](https://substack.com?utm_source=chatgpt.com)
+
+[Hugging Face](https://huggingface.co?utm_source=chatgpt.com)
+
+[Google Colab](https://colab.google?utm_source=chatgpt.com)
+
+
+A lot of early-career people stall because they consume ideas instead of producing artifacts.
+
+
+---
+
+Stage 2 (1–2 years): Attach to institutions
+
+Independent work matters, but institutions create credibility, mentorship, and network effects.
+
+Aim for:
+
+fellowships,
+
+research assistantships,
+
+nonprofit collaborations,
+
+think tank internships,
+
+open-source safety projects,
+
+or policy labs.
+
+
+Organizations worth watching:
+
+[Centre for the Governance of AI](https://www.governance.ai?utm_source=chatgpt.com)
+
+[Partnership on AI](https://partnershiponai.org?utm_source=chatgpt.com)
+
+[AI Now Institute](https://ainowinstitute.org?utm_source=chatgpt.com)
+
+[Mozilla Foundation](https://foundation.mozilla.org?utm_source=chatgpt.com)
+
+[Data & Society](https://datasociety.net?utm_source=chatgpt.com)
+
+[OpenMined](https://openmined.org?utm_source=chatgpt.com)
+
+[African Observatory on Responsible AI](https://www.afr-observatory.org?utm_source=chatgpt.com)
+
+
+Also watch:
+
+OECD AI governance work,
+
+UNESCO AI recommendations,
+
+and African Union digital policy initiatives.
+
+
+This stage is where many people first get paid.
+
+
+---
+
+Stage 3 (2–4 years): Specialize
+
+General “AI ethics” becomes vague after a while. Specialization creates leverage.
+
+Strong niches right now:
+
+Technical AI safety / evaluations
+
+Best if you enjoy coding and experimentation.
+
+Work includes:
+
+red-teaming models,
+
+eval benchmarks,
+
+interpretability,
+
+robustness testing,
+
+alignment experiments.
+
+
+Tools:
+
+Python,
+
+ML basics,
+
+transformers,
+
+eval frameworks.
+
+
+Organizations:
+
+[Anthropic](https://www.anthropic.com?utm_source=chatgpt.com)
+
+[OpenAI](https://openai.com?utm_source=chatgpt.com)
+
+[METR](https://metr.org?utm_source=chatgpt.com)
+
+
+Governance & policy
+
+Best if you enjoy writing, regulation, and geopolitics.
+
+Work includes:
+
+regulation analysis,
+
+international governance,
+
+AI standards,
+
+policy memos,
+
+public-interest research.
+
+
+Responsible AI in industry
+
+Best for stable employment.
+
+Companies hire for:
+
+fairness reviews,
+
+compliance,
+
+model documentation,
+
+risk management,
+
+audit pipelines.
+
+
+Trust & safety
+
+Rapidly growing.
+
+Focus:
+
+misinformation,
+
+abuse prevention,
+
+platform integrity,
+
+content moderation systems.
+
+
+
+---
+
+Your location is not necessarily a disadvantage
+
+Being in Lagos can actually become a differentiator if you develop expertise on:
+
+AI in emerging markets,
+
+multilingual systems,
+
+governance gaps,
+
+digital labor,
+
+biometric systems,
+
+or AI deployment in African institutions.
+
+
+There are fewer experts covering these areas deeply.
+
+A common mistake is trying to imitate U.S.-centric discourse instead of becoming the person who understands local realities better than anyone else.
+
+
+---
+
+Skills that matter most
+
+Essential
+
+strong analytical writing,
+
+basic statistics,
+
+AI literacy,
+
+policy reasoning,
+
+public communication.
+
+
+Increasingly important
+
+Python,
+
+ML fundamentals,
+
+model evaluation,
+
+data analysis.
+
+
+You do not need a PhD immediately.
+
+But eventually, advanced credentials help if you want:
+
+academia,
+
+top governance institutions,
+
+or frontier-lab research.
+
+
+
+---
+
+A practical weekly structure
+
+A strong independent trajectory could look like:
+
+40% research/writing,
+
+30% technical learning,
+
+20% networking/collaboration,
+
+10% publishing/distribution.
+
+
+Consistency matters more than intensity.
+
+One excellent public artifact per month is enough to build momentum over time.
+
+
+---
+
+What success usually looks like by 27–30
+
+If you stay consistent, realistic outcomes include:
+
+policy researcher,
+
+Responsible AI specialist,
+
+safety evaluator,
+
+governance analyst,
+
+fellowship-funded researcher,
+
+nonprofit lead,
+
+or founder of an AI governance initiative.
+
+
+The field is still young enough that reputation compounds quickly.
+
+People who publish thoughtful work consistently for 3–5 years often become surprisingly influential relative to their age.

@@ -1,0 +1,40 @@
+Building a career as an independent researcher is genuinely hard, but it's one of the most viable paths it's ever been — here's how to think about it:
+
+## Establish a research identity before you need credentials
+
+Your work *is* your credential. This means:
+
+- **Publish early, even imperfectly.** Preprint servers (arXiv, SSRN, PhilArchive) let you establish priority and visibility before peer review.
+- **Pick a specific niche** where you can develop genuine comparative advantage. Broad interests are fine internally; externally you need to be "the person who works on X."
+- **Write publicly** — a Substack, blog, or even long-form Twitter/X threads build an audience and force clarity of thought.
+
+## Build institutional connections without institutional employment
+
+- **Find mentors and collaborators** — even one credentialed academic who takes your work seriously changes everything. They can co-author, vouch, provide endorsements (e.g. arXiv), and open doors.
+- **Attend conferences** — many have travel grants or reduced fees. Being physically present accelerates relationship-building by years.
+- **Engage in online academic communities** — ResearchGate, relevant subreddits, Discord servers, and mailing lists in your field.
+
+## Navigate the publishing system strategically
+
+- **Understand which venues are accessible** to independent researchers — some journals actively welcome them (Physics Essays, for instance, doesn't gatekeep by affiliation); others implicitly or explicitly require institutional addresses.
+- **Diamond open access venues** (no fees for authors or readers) are your best friends financially.
+- **Target journals that match your work's scope** rather than prestige-hunting early. A solid paper in a mid-tier venue beats a rejection from Nature.
+
+## Make the economics work
+
+Independent research is financially precarious unless you address this directly:
+
+- **Grants for unaffiliated researchers** exist but are rare — look for private foundations, think tanks, and fellowship programs that don't require institutional affiliation.
+- **Consulting, writing, or teaching** on the side can subsidize research time.
+- **Some independent researchers affiliate loosely** with institutes (honorary research associate positions) to get library access, an institutional email, and legitimacy without salary.
+- **Keep costs low** — open-access tools, Sci-Hub (ethically gray but widely used), free software, and public datasets.
+
+## Protect and pace yourself
+
+- **Output consistently, not constantly.** One strong paper per year beats five rushed ones.
+- **Keep records** of your ideas and when you had them — priority matters.
+- **Don't wait for permission.** The system isn't designed for you, which means you have to be more strategic than someone inside it — but you also have freedoms they don't.
+
+---
+
+The meta-point: independent researchers who succeed tend to combine *genuine intellectual contribution* with *strategic visibility*. The work has to be real, but so does the networking and publishing strategy. You're already doing both.

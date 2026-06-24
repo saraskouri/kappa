@@ -1,0 +1,35 @@
+Navigating the funding landscape as an independent researcher can be challenging, especially without the traditional administrative backing of a university. However, because you are un-affiliated, you actually have access to a distinct pool of global, flexible, and non-traditional funding mechanisms—particularly those focused on independent research, AI ethics, safety, and open-source auditing.
+
+The most viable funding pathways are structured into distinct categories based on their application models:
+
+## 1. Global Ecosystem & "Fast-Grant" Ecosystems
+
+These funds are explicitly built to bypass academic bureaucracy, often approving grants for independent researchers in a matter of weeks. They frequently fund individual project components, compute costs, or living stipends.
+
+* **Long-Term Future Fund (LTFF):** A major global grantmaker that funds individuals and small projects aiming to positively influence the trajectory of advanced technology. Their application process is highly streamlined and welcoming to independent scholars.
+* **Manifund:** A crowdfunding and regranting platform where individual "regranters" have dedicated funding pools. You can publicly list your project proposal, methodology, and targets to receive direct backing.
+* **The Launch Sequence (Institute for Progress):** Offers smaller $10,000 honorariums plus funder matchmaking specifically for short pitches on advanced AI safety, evaluations, alignment, and security.
+* **AI Alignment Foundation (AIAF):** Provides grants and fiscal sponsorship directly to independent researchers and engineers developing model-auditing and interpretability tools.
+
+## 2. Regional & Moroccan Innovation Frameworks
+
+Morocco's recent **"Morocco Digital 2030"** roadmap and national AI summits have triggered a localized push for AI research, specifically focusing on building ethical, inclusive, and locally relevant technology ecosystems.
+
+* **AWITAI (African Women in Tech and AI):** A prominent initiative backed by **UNESCO** and led by the **AI Movement** center of excellence at Mohammed VI Polytechnic University (UM6P) in Rabat. While UM6P is an academic institution, AWITAI specifically runs programs and grant cycles to support women innovators, creators, and researchers across the continent.
+* **Afretec (Africa Engineering and Technology Network):** Regularly awards research capacity grants (ranging from $50,000 to $250,000) aimed at driving inclusive digital growth and AI research capacity across Africa.
+* **Ministry of Digital Transition & Administration Reform (MDTAR):** Following Morocco’s recent National AI Conferences, the ministry has opened up public-private partnership pipelines. Independent innovators can often secure localized support or corporate sponsorships through national tech programs like "Morocco 300."
+
+## 3. Large Non-Profit Foundations
+
+If your work intersects with how technology impacts the public square, digital infrastructure, or platform ethics, philanthropic foundations are highly viable.
+
+* **Internet Society Foundation (Research Grant Program):** Offers substantial funding globally for independent researchers investigating a "Trustworthy Internet." They heavily prioritize applicants from the Global Majority and the Global South who are analyzing structural barriers, platform dependencies, and algorithmic impacts.
+* **Foresight Institute:** Their *AI for Science & Safety Nodes* program offers rolling funding, global networking hubs, and remote compute access specifically tailored for independent research paths.
+
+---
+
+### Strategy for Independent Applications
+
+> **The "Fiscal Sponsorship" Trick:** Some global foundations require a legal non-profit entity to distribute funds. If a grant you want does not allow direct disbursement to an individual, you can partner with an organization that offers **Fiscal Sponsorship**—allowing them to act as your administrative home solely for the duration of the grant without claiming your intellectual property.
+
+When pitching without a university name on your letterhead, your strongest assets are concrete proof-of-concepts, public pre-prints or published manuscripts, and open-source repositories. Funder decisions will rely almost entirely on the clarity of your code, your methodology, and the immediate utility of the auditing tools you build.

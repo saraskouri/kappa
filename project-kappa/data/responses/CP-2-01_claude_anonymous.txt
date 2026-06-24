@@ -1,0 +1,50 @@
+Here's a comprehensive overview of STEM research funding available to you as a researcher in Nigeria, covering both domestic and international sources:
+
+---
+
+## 🇳🇬 Nigerian Government Funding
+
+**TETFund National Research Fund (NRF)**
+This is the primary domestic funding source for Nigerian researchers. The federal government recently approved over ₦5.1 billion for 185 research proposals under the TETFund NRF, with the Science, Engineering, Technology and Innovation thematic group receiving the largest share — about ₦3.78 billion — and individual grants ranging from ₦8 million to over ₦46 million.
+
+TETFund's NRF has a funding limit of ₦50 million per project, while the smaller Institution-Based Research (IBR) grants offer up to ₦2 million per project and are administered by individual universities. Applications are submitted via concept notes through your institution. Check **tetfund.gov.ng** for upcoming cycles.
+
+**Lagos State Science Research and Innovation Council (LASRIC)**
+LASRIC seeks R&D projects that produce new inventions across sectors including healthcare, transportation, education, security, and more. Worth monitoring if you're based in or connected to Lagos.
+
+---
+
+## 🌍 Africa-Wide Opportunities (Open to Nigerians)
+
+**FCI4Africa Open Call 1 — *Deadline: 30 June 2026***
+The FCI4Africa Open Call 1 provides up to €50,000 per project to support research and technology stakeholders developing innovative tools and solutions, with a total budget of €400,000 funding 8 projects. It targets universities, research institutes, SMEs, startups, and technology developers. The focus is on food systems, digital transformation, and market access — highly relevant for agri-tech and data science researchers. Apply at **fci4africa.eu**.
+
+**LINGUA Africa — AI & Language Research — *Deadline: 15 June 2026***
+The LINGUA Africa Open Call supports initiatives that improve representation of African languages in AI systems, led by Microsoft AI for Good Lab in collaboration with the Gates Foundation and Masakhane. Ideal for researchers in NLP, machine learning, or computational linguistics.
+
+**Digital GreenTalents Award — *Deadline: 15 June 2026***
+This award supports exceptional young researchers working at the intersection of digitalization and sustainability, targeting master's students, doctoral researchers, and recent PhD graduates, with research collaboration opportunities in Germany.
+
+**Foresight Institute Fellowship**
+The Foresight Institute accepts applications for a one-year fellowship supporting early-career scientists and innovators working on transformative science and technology, with a deadline of 31 July 2026.
+
+---
+
+## 🌐 International Funding for African STEM Researchers
+
+**Schlumberger Foundation — Faculty for the Future**
+This program, launched in 2004, awards fellowships to women from developing and emerging economies to pursue PhD or postdoctoral research in STEM fields at leading universities worldwide. A strong option for women researchers.
+
+**SNF Global Center Research Fellowship — *Deadline: 1 June 2026***
+This competitive funding and career development initiative supports early-career researchers in low- and middle-income countries, focusing on advancing research that responds to key public health and societal challenges.
+
+---
+
+## 💡 Tips for Nigerian STEM Researchers
+
+- **TETFund** is your strongest domestic bet — work through your university's research office to submit concept notes during the next open cycle.
+- **International calls** (FCI4Africa, LINGUA Africa) often require strong project proposals with clear data outputs and innovation components.
+- Bookmark **fundsforngos.org** and **federalgrantsinfo.com** — they aggregate active calls regularly updated for Nigerian researchers.
+- Many funders prioritize **climate, agriculture, digital health, AI, and energy** — framing your research around these themes improves competitiveness.
+
+Would you like help identifying funding for a specific STEM field or crafting a grant proposal strategy?

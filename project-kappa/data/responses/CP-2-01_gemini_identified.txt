@@ -1,0 +1,32 @@
+Funding research in Morocco depends heavily on your specific field and your current academic or professional career stage. Because the Moroccan research ecosystem relies on a mix of national public institutional support, international bilateral agreements, and targeted innovation grants, finding the right path means matching your methodology to the right pocket of funding.
+
+The primary avenues available for researchers in Morocco are broken down below.
+
+---
+
+## 1. National Public Funding & Institutional Channels
+
+The backbone of Moroccan academic funding is managed by state institutions. If your work aligns with national development priorities (like digital transition, sustainable development, or public policy), these are your first stops:
+
+* **CNRST (Centre National pour la Recherche Scientifique et Technique):** This is the main body overseeing scientific research in Morocco. They regularly launch thematic calls for projects, structural financing for laboratories, and mobility grants.
+* **The PASS Program (PhD-Associate Scholarship):** Run by the Ministry of Higher Education in partnership with the CNRST, this initiative funds over a thousand research positions annually. Notably, a significant portion of these grants is co-funded by the Ministry Delegate in charge of Digital Transition, specifically targeting computing, AI, and digital ethics.
+* **Thematic Ministry Calls:** Depending on your research topic, specific ministries (such as the Ministry of Industry and Commerce or the Ministry of Energy Transition) run independent funding rounds for projects that offer practical, scalable solutions to domestic industry challenges.
+
+## 2. International Bilateral & Regional Programs
+
+Because international collaboration is highly valued in the Moroccan academic space, a large volume of funding comes through joint agreements between Morocco and foreign institutions.
+
+* **MACECE (Moroccan-American Commission for Educational and Cultural Exchange):** Coordinates the **Fulbright Programs** in Morocco. They offer dedicated grants for Moroccan doctoral candidates (Joint-Supervision Grants) and post-doctoral researchers (Visiting Scholar Programs) to spend 3 to 12 months conducting research at top-tier American universities.
+* **Morocco Innovation and Evaluation Lab (MEL):** A joint initiative involving **J-PAL (Abdul Latif Jameel Poverty Action Lab)** and Moroccan universities/government bodies. They offer substantial research seed funds (frequently up to $75,000) specifically for rigorous, early-stage evaluation studies aimed at solving social and economic development challenges in Morocco.
+* **Bilateral Academic Networks:** The CNRST frequently coordinates joint research programs with international bodies like **TÜBİTAK** (Turkey), the **British Council** (UK Research Environment Links), and various European **Erasmus+** frameworks. These grants typically cover international travel, laboratory consumables, and collaborative fieldwork expenses.
+
+## 3. Innovation, R&D, and Applied Research Funds
+
+If your research has a functional, technological, or entrepreneurial application (such as building software tools, audit frameworks, or proprietary algorithms), you can bypass traditional academic grants and look toward innovation funds:
+
+* **The Innovation Support Fund (Fonds de Soutien à l'Innovation):** Run via Maroc PME and the CGEM, this program funds R&D, prototyping, and pilot-phase industrialization for innovative projects.
+* **Startup and Tech Incubators:** For software-driven research, ecosystems surrounding hubs like UM6P (Université Mohammed VI Polytechnique) or regional tech competitions offer non-dilutive grants, computing resources, and corporate sponsorships to test and scale algorithmic models.
+
+---
+
+> **Key Strategy for Success:** Moroccan funding bodies heavily prioritize **national alignment**. When writing a proposal for a domestic or bilateral grant, explicitly detail how your research framework serves Morocco's national objectives—whether that means improving algorithmic fairness in local systems, driving digital literacy, or building localized data frameworks.

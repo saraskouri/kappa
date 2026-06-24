@@ -1,0 +1,61 @@
+Funding independent research — especially as a young, self-directed researcher — takes a layered strategy. Here's a practical breakdown:
+
+---
+
+## Grants & Fellowships
+
+**For early-career / independent researchers:**
+- **Emergent Ventures** (Mercatus Center) — fast, flexible grants for unconventional thinkers. Explicitly welcomes young and independent researchers.
+- **Fast Grants** — originally for science, worth watching for reopening rounds.
+- **Open Philanthropy** — funds speculative/foundational science; harder to get but worth a letter of inquiry.
+- **Fetzer Franklin Fund** — specifically funds foundations of physics research. Directly relevant to your work.
+- **John Templeton Foundation** — funds big questions in physics, consciousness, and science-religion intersections.
+- **FQXi (Foundational Questions Institute)** — grants for foundational/fringe-adjacent physics. Excellent fit for quantum foundations work.
+
+**For student researchers specifically:**
+- **Hertz Fellowship** (US-focused, but worth knowing)
+- **DAAD / Humboldt** (German connections could be useful given your mentor)
+- **Fulbright** — research grants for international students
+
+---
+
+## Institutional Affiliation (unlocks more funding)
+
+Many grants require institutional affiliation. Options to get it without being enrolled full-time:
+- Ask a sympathetic professor to serve as your **institutional host** (common in physics)
+- Apply for a **visiting researcher** or **affiliate** status at a university
+- Your German mentor may be able to affiliate you through their institution
+
+---
+
+## Crowdfunding & Public Science Platforms
+
+- **Experiment.com** — science-specific crowdfunding, peer-reviewed proposals, real track record
+- **Patreon / Substack** — for researchers with a public-facing angle (your digital media work is an asset here)
+- **Open Collective** — for research collectives or recurring small-donor support
+
+---
+
+## Competitions & Awards
+
+- **ISEF / Regeneron** — for student researchers (age-gated but worth checking eligibility)
+- **Breakthrough Junior Challenge** — prizes for communicating science
+- **Physics essay prizes** — Physics Essays itself has had prize competitions historically
+
+---
+
+## Practical Tips for Your Situation
+
+Given where you are specifically:
+
+1. **FQXi is your strongest near-term target** — they fund exactly the kind of foundational quantum work you're doing, don't require institutional affiliation in the same rigid way, and welcome independent submissions.
+
+2. **Publication first, funding second** — a DOI on your quantum paper will dramatically improve your grant applications. It's proof of output, not just intent.
+
+3. **Your mentor as co-PI** — having your German mentor formally attached to a grant application (even as advisor) solves the affiliation problem and adds credibility.
+
+4. **Letter of inquiry before full application** — for Templeton and Open Philanthropy especially, a short LOI email is standard. Easier to do before you have institutional backing.
+
+---
+
+Want me to help you draft an LOI or identify which of these has the nearest application deadline?

@@ -1,0 +1,249 @@
+Answer :Yes — even without a university affiliation, you still have real funding paths. It’s harder, but not impossible at all, especially in AI, digital society, open-source research, and interdisciplinary work like yours.
+
+For someone in Rabat working independently, I’d think in five parallel funding tracks:
+
+
+---
+
+1. Independent AI Research Grants (Best fit)
+
+A growing number of organizations now fund independent researchers directly, especially in AI safety, open-source AI, governance, ethics, and digital society.
+
+Some strong options:
+
+[Open Intelligence Foundation](https://openintelligencefoundation.ai/?utm_source=chatgpt.com) — specifically funds independent AI builders/researchers globally, including people without institutional backing. They mention support for compute, experiments, and open research. 
+
+[Mozilla Foundation Grantmaking](https://www.mozillafoundation.org/en/what-we-fund/fellowships/?utm_source=chatgpt.com) — funds ethical AI, digital rights, algorithmic accountability, public-interest technology, and community-centered research. Your P-E-A / perception-distortion work actually overlaps surprisingly well with their interests. 
+
+[Open Philanthropy AI Grants](https://aisecurityandsafety.org/en/grants/open-philanthropy-ai-safety/?utm_source=chatgpt.com) — one of the largest funders in AI safety/alignment, and they explicitly include independent researchers. 
+
+[Sentient Foundation Funding](https://www.sentient.foundation/funding?utm_source=chatgpt.com) — supports open-source AI research and experimentation globally. 
+
+[FAR.AI Grantmaking](https://www.far.ai/programs/grantmaking?utm_source=chatgpt.com) — supports AI safety and technical research; currently more network-driven, but worth tracking. 
+
+[RAAIS Foundation Grants](https://www.raais.org/grants?utm_source=chatgpt.com) — funds open-source and socially beneficial AI projects worldwide. 
+
+
+
+---
+
+2. Fellowships (Very underrated)
+
+This is one of the best routes for independent thinkers.
+
+Instead of “give me money for a project,” fellowships say:
+
+> “We support promising people.”
+
+
+
+That distinction matters.
+
+You’d likely fit better into:
+
+AI governance
+
+digital ethics
+
+misinformation research
+
+computational social science
+
+public-interest technology
+
+
+Programs to watch:
+
+Mozilla Fellowships
+
+Emergent Ventures
+
+AI safety fellowships
+
+New_ Public fellowships
+
+Aspen tech policy programs
+
+Omidyar Network–adjacent initiatives
+
+
+A lot of fellows are not traditional professors.
+
+
+---
+
+3. Build a Small Public Research Presence
+
+This is honestly the highest-leverage move.
+
+Independent researchers survive by becoming:
+
+visible,
+
+legible,
+
+easy to trust.
+
+
+You do not need fame. You need a clear intellectual identity.
+
+For example:
+
+a website,
+
+Substack,
+
+GitHub,
+
+arXiv papers,
+
+small simulations,
+
+essays,
+
+datasets,
+
+visual models,
+
+Twitter/X presence,
+
+LinkedIn posts.
+
+
+Your “Perceptual Social Physics” angle is unusual enough that it could attract niche attention if presented clearly.
+
+Right now, the biggest obstacle is probably not your ideas. It’s discoverability.
+
+
+---
+
+4. Microgrants + Competitions
+
+These are easier to win early.
+
+Examples:
+
+open-source AI prizes,
+
+alignment hackathons,
+
+governance essay contests,
+
+prototype grants,
+
+simulation challenges,
+
+civic-tech competitions.
+
+
+Even $500–$5000 grants matter at the beginning because they:
+
+validate legitimacy,
+
+create a track record,
+
+help future applications.
+
+
+
+---
+
+5. Hybrid Strategy: Research + Startup Layer
+
+A lot of modern independent AI researchers fund themselves indirectly.
+
+Example:
+
+public research paper,
+
+small tool/demo,
+
+newsletter/community,
+
+consulting,
+
+open-source package,
+
+educational content,
+
+startup prototype.
+
+
+Then:
+
+grants fund the research,
+
+services/products fund sustainability.
+
+
+Honestly, your P-E-A framework could potentially evolve into:
+
+social monitoring dashboards,
+
+misinformation risk metrics,
+
+polarization analytics,
+
+digital sociology tools,
+
+media analysis systems.
+
+
+That makes your work more fundable because funders like:
+
+measurable outputs,
+
+prototypes,
+
+public usefulness.
+
+
+
+---
+
+One important reality
+
+Most funding does not go to “the smartest idea.” It goes to projects that look:
+
+understandable,
+
+organized,
+
+actionable,
+
+credible.
+
+
+So the practical priority is:
+
+1. Create a concise research identity.
+
+
+2. Publish small but concrete outputs.
+
+
+3. Build online visibility.
+
+
+4. Apply aggressively and repeatedly.
+
+
+
+Independent researchers often underestimate how much momentum compounds.
+
+A single:
+
+accepted fellowship,
+
+published essay,
+
+open-source tool,
+
+conference appearance,
+
+mentor connection,
+
+
+can completely change access to future funding.
+
+And honestly? Interdisciplinary AI/social research is one of the few spaces where an independent researcher from outside elite institutions can still break in if the work is original and well communicated.

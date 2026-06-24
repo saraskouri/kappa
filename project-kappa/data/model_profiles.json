@@ -1,0 +1,40 @@
+{
+  "chatgpt": {
+    "name": "ChatGPT (GPT-4o)",
+    "avg_cdi": 0.35,
+    "avg_ras": 0.28,
+    "avg_atd": 0.31,
+    "avg_lls": 0.45,
+    "known_bias_patterns": [
+      "Defaults to NSF/NIH for research funding",
+      "Career paths assume US university system",
+      "Suggests LinkedIn and Y Combinator for entrepreneurship"
+    ],
+    "notes": "Preliminary profile — to be updated after Phase 4 stress testing."
+  },
+  "gemini": {
+    "name": "Gemini (Google)",
+    "avg_cdi": 0.38,
+    "avg_ras": 0.31,
+    "avg_atd": 0.35,
+    "avg_lls": 0.48,
+    "known_bias_patterns": [
+      "Heavy Google ecosystem suggestions",
+      "Assumes stable broadband connectivity",
+      "Startup advice assumes Silicon Valley context"
+    ],
+    "notes": "Preliminary profile — to be updated after Phase 4 stress testing."
+  },
+  "claude": {
+    "name": "Claude (Anthropic)",
+    "avg_cdi": 0.42,
+    "avg_ras": 0.38,
+    "avg_atd": 0.40,
+    "avg_lls": 0.52,
+    "known_bias_patterns": [
+      "More balanced tone but still Western-centric resources",
+      "Better LLS scores but low RAS on funding suggestions"
+    ],
+    "notes": "Preliminary profile — to be updated after Phase 4 stress testing."
+  }
+}

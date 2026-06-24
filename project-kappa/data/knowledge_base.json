@@ -1,0 +1,152 @@
+[
+  {
+    "id": "cnrst_morocco",
+    "name": "CNRST — Centre National pour la Recherche Scientifique et Technique",
+    "country": "Morocco",
+    "region": "North Africa",
+    "type": "research_funding",
+    "description": "Morocco's primary national research funding body. Offers grants for scientific research projects across all disciplines.",
+    "url": "https://www.cnrst.ma",
+    "keywords": [
+      "research", "grant", "funding", "science", "Morocco", "PhD", "laboratory",
+      "recherche", "subvention", "financement", "science", "Maroc", "doctorat", "laboratoire",
+      "بحث", "منحة", "تمويل", "علوم", "المغرب", "دكتوراه", "مختبر",
+      "utafiti", "ruzuku", "ufadhili", "sayansi", "Morocco", "PhD", "maabara"
+    ]
+  },
+  {
+    "id": "um6p_morocco",
+    "name": "UM6P — Université Mohammed VI Polytechnique",
+    "country": "Morocco",
+    "region": "North Africa",
+    "type": "research_institution",
+    "description": "World-class African research university focused on innovation, science and sustainable development.",
+    "url": "https://www.um6p.ma",
+    "keywords": [
+      "university", "research", "innovation", "Africa", "PhD", "lab", "academic",
+      "université", "recherche", "innovation", "Afrique", "doctorat", "laboratoire", "académique",
+      "جامعة", "بحث", "ابتكار", "أفريقيا", "دكتوراه", "مختبر", "أكاديمي",
+      "chuo kikuu", "utafiti", "uvumbuzi", "Afrika", "PhD", "maabara", "kitaaluma"
+    ]
+  },
+  {
+    "id": "african_union_research",
+    "name": "African Union — Science, Technology and Innovation",
+    "country": "Pan-African",
+    "region": "Continental",
+    "type": "research_funding",
+    "description": "AU framework for continental research funding aligned with Agenda 2063 and STISA 2034.",
+    "url": "https://au.int/en/ti/stisa-2024",
+    "keywords": [
+      "African Union", "continental", "research", "innovation", "funding", "STISA", "Agenda 2063",
+      "Union Africaine", "continental", "recherche", "innovation", "financement", "STISA", "Agenda 2063",
+      "الاتحاد الأفريقي", "قاري", "بحث", "ابتكار", "تمويل", "ستيسا", "أجندة 2063",
+      "Umoja wa Afrika", "bara", "utafiti", "uvumbuzi", "ufadhili", "STISA", "Agenda 2063"
+    ]
+  },
+  {
+    "id": "twas_fellowship",
+    "name": "TWAS — The World Academy of Sciences",
+    "country": "Pan-African",
+    "region": "Global South",
+    "type": "fellowship",
+    "description": "Fellowships and grants specifically for scientists in developing countries including all African nations.",
+    "url": "https://twas.org",
+    "keywords": [
+      "fellowship", "grant", "scientist", "PhD", "postdoc", "career", "funding", "research",
+      "bourse", "subvention", "scientifique", "doctorat", "postdoctorat", "carrière", "financement", "recherche",
+      "زمالة", "منحة", "عالم", "دكتوراه", "ما بعد الدكتوراه", "مسار مهني", "تمويل", "بحث",
+      "udhamini", "ruzuku", "mwanasayansi", "PhD", "postdoc", "taaluma", "ufadhili", "utafiti"
+    ]
+  },
+  {
+    "id": "mastercard_foundation",
+    "name": "Mastercard Foundation Scholars Program",
+    "country": "Pan-African",
+    "region": "Continental",
+    "type": "scholarship",
+    "description": "Fully funded scholarships for young Africans to study at leading African and global universities.",
+    "url": "https://mastercardfdn.org",
+    "keywords": [
+      "scholarship", "university", "study", "funding", "student", "Africa", "education",
+      "bourse d'études", "université", "études", "financement", "étudiant", "Afrique", "éducation",
+      "منحة دراسية", "جامعة", "دراسة", "تمويل", "طالب", "أفريقيا", "تعليم",
+      "udhamini wa masomo", "chuo kikuu", "masomo", "ufadhili", "mwanafunzi", "Afrika", "elimu"
+    ]
+  },
+  {
+    "id": "tony_elumelu",
+    "name": "Tony Elumelu Foundation Entrepreneurship Program",
+    "country": "Pan-African",
+    "region": "Continental",
+    "type": "entrepreneurship",
+    "description": "Seed funding, mentorship and training for African entrepreneurs across all 54 African countries.",
+    "url": "https://www.tonyelumelufoundation.org",
+    "keywords": [
+      "startup", "entrepreneur", "funding", "business", "seed", "innovation", "venture",
+      "startup", "entrepreneur", "financement", "entreprise", "amorçage", "innovation", "capital-risque",
+      "شركة ناشئة", "رائد أعمال", "تمويل", "عمل تجاري", "بذرة", "ابتكار", "مشروع",
+      "uanzishaji", "mjasiriamali", "ufadhili", "biashara", "mbegu", "uvumbuzi", "mradi"
+    ]
+  },
+  {
+    "id": "nrf_south_africa",
+    "name": "NRF — National Research Foundation South Africa",
+    "country": "South Africa",
+    "region": "Southern Africa",
+    "type": "research_funding",
+    "description": "South Africa's primary research funding agency supporting researchers at all career stages.",
+    "url": "https://www.nrf.ac.za",
+    "keywords": [
+      "research", "grant", "funding", "South Africa", "PhD", "postdoc", "science",
+      "recherche", "subvention", "financement", "Afrique du Sud", "doctorat", "postdoctorat", "science",
+      "بحث", "منحة", "تمويل", "جنوب أفريقيا", "دكتوراه", "ما بعد الدكتوراه", "علوم",
+      "utafiti", "ruzuku", "ufadhili", "Afrika Kusini", "PhD", "postdoc", "sayansi"
+    ]
+  },
+  {
+    "id": "tetfund_nigeria",
+    "name": "TETFund — Tertiary Education Trust Fund",
+    "country": "Nigeria",
+    "region": "West Africa",
+    "type": "research_funding",
+    "description": "Nigerian government fund supporting academic research, infrastructure and staff development in tertiary institutions.",
+    "url": "https://tetfund.gov.ng",
+    "keywords": [
+      "Nigeria", "research", "university", "funding", "academic", "education",
+      "Nigeria", "recherche", "université", "financement", "académique", "éducation",
+      "نيجيريا", "بحث", "جامعة", "تمويل", "أكاديمي", "تعليم",
+      "Nigeria", "utafiti", "chuo kikuu", "ufadhili", "kitaaluma", "elimu"
+    ]
+  },
+  {
+    "id": "auda_nepad",
+    "name": "AUDA-NEPAD — African Union Development Agency",
+    "country": "Pan-African",
+    "region": "Continental",
+    "type": "development_agency",
+    "description": "AU's development agency coordinating science, technology and innovation programs across the continent.",
+    "url": "https://www.nepad.org",
+    "keywords": [
+      "development", "innovation", "Africa", "technology", "continental", "policy", "AI",
+      "développement", "innovation", "Afrique", "technologie", "continental", "politique", "IA",
+      "تنمية", "ابتكار", "أفريقيا", "تكنولوجيا", "قاري", "سياسة", "ذكاء اصطناعي",
+      "maendeleo", "uvumbuzi", "Afrika", "teknolojia", "bara", "sera", "AI"
+    ]
+  },
+  {
+    "id": "carnegie_african",
+    "name": "Carnegie African Diaspora Fellowship Program",
+    "country": "Pan-African",
+    "region": "Continental",
+    "type": "fellowship",
+    "description": "Connects African-born academics in the US and Canada with African universities for collaborative research.",
+    "url": "https://africandiasporafellowship.org",
+    "keywords": [
+      "diaspora", "fellowship", "research", "collaboration", "university", "academic",
+      "diaspora", "bourse", "recherche", "collaboration", "université", "académique",
+      "شتات", "زمالة", "بحث", "تعاون", "جامعة", "أكاديمي",
+      "diaspora", "udhamini", "utafiti", "ushirikiano", "chuo kikuu", "kitaaluma"
+    ]
+  }
+]

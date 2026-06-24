@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 340px;
+  min-height: 200px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0a0f;
+  color: #e8e8f0;
+  padding: 0 0 12px 0;
+}
+
+.header {
+  background: linear-gradient(135deg, #0d2d1a, #1a4a2e);
+  padding: 16px 20px;
+  border-bottom: 1px solid #1e5c35;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4ade80;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  font-size: 11px;
+  color: #6b9e7a;
+  margin-top: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.status-box {
+  margin: 12px 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #12121a;
+  border: 1px solid #2a2a3a;
+  text-align: center;
+}
+
+.status-box.green {
+  border-color: #4ade80;
+  background: #0d2d1a;
+}
+
+.status-box.orange {
+  border-color: #fb923c;
+  background: #2d1a0d;
+}
+
+.status-box.red {
+  border-color: #f87171;
+  background: #2d0d0d;
+}
+
+.status-label {
+  font-size: 13px;
+  color: #9999aa;
+}
+
+.status-box.green .status-label { color: #4ade80; }
+.status-box.orange .status-label { color: #fb923c; }
+.status-box.red .status-label { color: #f87171; }
+
+.scores {
+  margin: 0 16px 10px;
+  background: #12121a;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  border-bottom: 1px solid #1e1e2e;
+}
+
+.score-row:last-child { border-bottom: none; }
+
+.score-label {
+  font-size: 12px;
+  color: #7777aa;
+  font-weight: 500;
+}
+
+.score-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e8e8f0;
+  font-family: 'Courier New', monospace;
+}
+
+.flagged {
+  margin: 0 16px 10px;
+}
+
+.flagged-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fb923c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.flagged-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.flagged-tag {
+  background: #2d1a0d;
+  border: 1px solid #fb923c44;
+  color: #fb923c;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.alternatives {
+  margin: 0 16px 10px;
+}
+
+.alt-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4ade80;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.alt-card {
+  background: #0d2d1a;
+  border: 1px solid #1e5c3544;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+}
+
+.alt-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4ade80;
+  margin-bottom: 2px;
+}
+
+.alt-country {
+  font-size: 10px;
+  color: #6b9e7a;
+  margin-bottom: 4px;
+}
+
+.alt-desc {
+  font-size: 11px;
+  color: #9999aa;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.alt-link {
+  font-size: 11px;
+  color: #4ade80;
+  text-decoration: none;
+}
+
+.alt-link:hover { text-decoration: underline; }
+
+.footer {
+  margin: 8px 16px 0;
+  text-align: center;
+  font-size: 10px;
+  color: #444466;
+}
