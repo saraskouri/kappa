@@ -84,5 +84,5 @@ Kappa is built on the **P‑E‑A Framework** (Perceived Exaggerated Amplificati
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/kappa.git
+git clone https://github.com/saraskouri/kappa.git
 cd kappa
