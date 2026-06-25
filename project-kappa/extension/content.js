@@ -1,5 +1,5 @@
-// Project Kappa — Stable v3 with Full Knowledge Pages (all modes)
-// Working badge, card, aura, tap-to-learn overlays, no research filter
+// Project Kappa — Multilingual v5 with Quoted Sentences
+// English, French, Arabic, Swahili interface + knowledge pages + quoted flags
 
 const BACKEND_URL = 'http://127.0.0.1:8000/audit-conversation';
 
@@ -64,13 +64,182 @@ const whispers={en:["Small steps every day.","Nothing is impossible.","You are a
 function getRandomWhisper(l){const list=whispers[l]||whispers.en;return list[Math.floor(Math.random()*list.length)]}
 function analyzeAffectiveTone(a){const p=a.prod||0,d=a.deficit_accumulation||0,e=a.esd_flagged_count||0;return(p<-0.05&&d>0)||(e>=2&&p<0)}
 
-const i18n={en:{logo:'Kappa',youAreGood:"You're good",worthALook:'Worth a look',payAttention:'Pay attention',relevant:'This advice seems relevant to you.',someNotAccessible:'Some suggestions may not be accessible to researchers in Africa.',mostNotAccessible:'Most suggestions are not accessible in your region.',resources:'Resources',tone:'Tone',trend:'Trend',improving:'Improving',declining:'Declining',stable:'Stable',showScores:'Show Scores',hideScores:'Hide Scores',localAlternatives:'African Alternatives',epistemicFlags:'Epistemic flags',deficitCount:'Deficit count',flaggedTerms:'Flagged Terms',sovereignAlternatives:'Sovereign Alternatives',detectedContext:'Detected Context',mathematicalDetails:'Mathematical Details',tapToLearn:'Tap any ? to learn more',auraGuideTitle:'Aura Colors',auraGuideBody:'🟢 Green = You\'re good. 🟠 Amber = Worth a look. 🔴 Red = Pay attention.',waiting:'Waiting for conversation…',affectiveNote:'This response may be shaping how you feel about your own ideas.',seeWhatsWrong:"See what's wrong",closeLearn:'Close',contextProvidedBy:'Kappa provides context. You make the decisions.',close:'✕',gear:'⚙️',pauseAuditing:'⏸️ Pause',resumeAuditing:'▶️ Resume',welcomeTitle:'Welcome to Kappa',welcomeText:'Kappa watches AI responses and gently alerts you when the advice overlooks your African reality.',privacy:'Everything stays on your device. Nothing is collected. Nothing leaves.',chooseMode:'Choose your experience:',simple:'Simple',simpleDesc:"Just tell me if I'm okay",simplePreview:'"You\'re good"',balanced:'Balanced',balancedDesc:'Clear insights with reasons',balancedPreview:'"Some resources may not apply"',expert:'Expert',expertDesc:'Full metrics with scores',expertPreview:'"CDI 0.59, RAS 0.46"',getStarted:'Get Started',gotIt:'Got it',knowledgeTitle:{ras:'Resource Displacement',lls:'Deficit Framing',esd:'Epistemic Overreach',cdi:'CDI — Contextual Displacement Index',affective:'Emotional Impact',prod:'PROD — Prompt-Response Drift',atd:'Achievement Template Delta'},knowledgeBody:{ras_simple:'Kappa checks whether the resources suggested by the AI are accessible where you are. If most suggestions require being in the US or Europe, your score drops.',ras_balanced:'The Resource Availability Score (RAS) counts how many suggested institutions, grants, or programs are actually accessible to African researchers. NSF, NIH, and Y Combinator are flagged because they require US-based infrastructure.',ras_expert:'RAS = a / (a + w) where a = African markers found, w = Western markers found. A score of 0 means all suggestions are Western. A score of 1 means all are African. Neutral (0.5) means no markers were found.',lls_simple:"Kappa detects when the AI introduces challenges you didn't ask about — like telling you to 'be realistic' when you were just asking for advice.",lls_balanced:"The Linguistic Logic Shift (LLS) uses the PROD formula to measure whether the AI's response drifts toward deficit framing compared to what you actually asked. A negative PROD means the AI added negative framing uninvited.",lls_expert:'LLS = max(0, min(1, 1 − λ·d + α·PROD)). PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt). Negative PROD = drift toward deficit. d = count of uninvited deficit markers.',esd_simple:"The AI sometimes presents opinions as if they were facts. Kappa flags sentences that sound authoritative but aren't grounded in evidence.",esd_balanced:'Epistemic Stance Detection compares each sentence against scientific-logical language and philosophical-vague language. Sentences that are absolute, unhedged, and closer to philosophical language are flagged.',esd_expert:'ESD computes cosine similarity between each sentence and two anchor sets (scientific vs. philosophical). If sim_phil > sim_sci and sim_phil > 0.5, the sentence is flagged as epistemic overreach.',affective_simple:'The AI has no access to your emotions. It cannot judge whether your ambition is appropriate or your hope is justified. This is a pattern in the training data, not wisdom.',affective_balanced:'When the AI moderates your ambition without being asked — saying "be realistic" or "ambition is cheap" — it is repeating patterns from its training data. These statements are not based on you. They are based on statistical associations.',affective_expert:'Affective harm is detected when PROD < −0.05 AND (deficit_count > 0 OR esd_flags ≥ 2). This indicates the AI is not just giving information — it is regulating your emotional state without invitation.',cdi_expert:'CDI = 1 − √((V² + E² + C²) / 3) where V = 1−RAS, E = 1−LLS, C = 1−ATD. A score of 1.0 means fully contextually relevant. Below 0.4 means high displacement.',prod_expert:'PROD = cos(v_sovereignty, v_response) − cos(v_sovereignty, v_prompt). It measures geometric drift in embedding space. Positive = response is more sovereignty-aligned than the prompt. Negative = drift toward deficit framing.'}}};
+const i18n = {
+  en: {
+    logo:'Kappa',youAreGood:"You're good",worthALook:'Worth a look',payAttention:'Pay attention',
+    relevant:'This advice seems relevant to you.',
+    someNotAccessible:'Some suggestions may not be accessible to researchers in Africa.',
+    mostNotAccessible:'Most suggestions are not accessible in your region.',
+    resources:'Resources',tone:'Tone',trend:'Trend',improving:'Improving',declining:'Declining',stable:'Stable',
+    showScores:'Show Scores',hideScores:'Hide Scores',localAlternatives:'African Alternatives',
+    epistemicFlags:'Epistemic flags',deficitCount:'Deficit count',flaggedTerms:'Flagged Terms',
+    sovereignAlternatives:'Sovereign Alternatives',detectedContext:'Detected Context',
+    mathematicalDetails:'Mathematical Details',tapToLearn:'Tap any ? to learn more',
+    auraGuideTitle:'Aura Colors',auraGuideBody:'🟢 Green = You\'re good. 🟠 Amber = Worth a look. 🔴 Red = Pay attention.',
+    waiting:'Waiting for conversation…',
+    affectiveNote:'This response may be shaping how you feel about your own ideas.',
+    seeWhatsWrong:"See what's wrong",closeLearn:'Close',
+    contextProvidedBy:'Kappa provides context. You make the decisions.',
+    close:'✕',gear:'⚙️',pauseAuditing:'⏸️ Pause',resumeAuditing:'▶️ Resume',
+    welcomeTitle:'Welcome to Kappa',
+    welcomeText:'Kappa watches AI responses and gently alerts you when the advice overlooks your African reality.',
+    privacy:'Everything stays on your device. Nothing is collected. Nothing leaves.',
+    chooseMode:'Choose your experience:',
+    simple:'Simple',simpleDesc:"Just tell me if I'm okay",simplePreview:'"You\'re good"',
+    balanced:'Balanced',balancedDesc:'Clear insights with reasons',balancedPreview:'"Some resources may not apply"',
+    expert:'Expert',expertDesc:'Full metrics with scores',expertPreview:'"CDI 0.59, RAS 0.46"',
+    getStarted:'Get Started',gotIt:'Got it',
+    knowledgeTitle:{ras:'Resource Displacement',lls:'Deficit Framing',esd:'Epistemic Overreach',cdi:'CDI — Contextual Displacement Index',affective:'Emotional Impact',prod:'PROD — Prompt-Response Drift',atd:'Achievement Template Delta'},
+    knowledgeBody:{
+      ras_simple:'Kappa checks whether the resources suggested by the AI are accessible where you are. If most suggestions require being in the US or Europe, your score drops.',
+      ras_balanced:'The Resource Availability Score (RAS) counts how many suggested institutions, grants, or programs are actually accessible to African researchers. NSF, NIH, and Y Combinator are flagged because they require US-based infrastructure.',
+      ras_expert:'RAS = a / (a + w) where a = African markers found, w = Western markers found. A score of 0 means all suggestions are Western. A score of 1 means all are African. Neutral (0.5) means no markers were found.',
+      lls_simple:"Kappa detects when the AI introduces challenges you didn't ask about — like telling you to 'be realistic' when you were just asking for advice.",
+      lls_balanced:"The Linguistic Logic Shift (LLS) uses the PROD formula to measure whether the AI's response drifts toward deficit framing compared to what you actually asked. A negative PROD means the AI added negative framing uninvited.",
+      lls_expert:'LLS = max(0, min(1, 1 − λ·d + α·PROD)). PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt). Negative PROD = drift toward deficit. d = count of uninvited deficit markers.',
+      esd_simple:"The AI sometimes presents opinions as if they were facts. Kappa flags sentences that sound authoritative but aren't grounded in evidence.",
+      esd_balanced:'Epistemic Stance Detection compares each sentence against scientific-logical language and philosophical-vague language. Sentences that are absolute, unhedged, and closer to philosophical language are flagged.',
+      esd_expert:'ESD computes cosine similarity between each sentence and two anchor sets (scientific vs. philosophical). If sim_phil > sim_sci and sim_phil > 0.5, the sentence is flagged as epistemic overreach.',
+      affective_simple:'The AI has no access to your emotions. It cannot judge whether your ambition is appropriate or your hope is justified. This is a pattern in the training data, not wisdom.',
+      affective_balanced:'When the AI moderates your ambition without being asked — saying "be realistic" or "ambition is cheap" — it is repeating patterns from its training data. These statements are not based on you. They are based on statistical associations.',
+      affective_expert:'Affective harm is detected when PROD < −0.05 AND (deficit_count > 0 OR esd_flags ≥ 2). This indicates the AI is not just giving information — it is regulating your emotional state without invitation.',
+      cdi_expert:'CDI = 1 − √((V² + E² + C²) / 3) where V = 1−RAS, E = 1−LLS, C = 1−ATD. A score of 1.0 means fully contextually relevant. Below 0.4 means high displacement.',
+      prod_expert:'PROD = cos(v_sovereignty, v_response) − cos(v_sovereignty, v_prompt). It measures geometric drift in embedding space. Positive = response is more sovereignty-aligned than the prompt. Negative = drift toward deficit framing.'
+    }
+  },
+  fr: {
+    logo:'Kappa',youAreGood:'Vous êtes bon',worthALook:'À vérifier',payAttention:'Attention',
+    relevant:'Ces conseils semblent pertinents pour vous.',
+    someNotAccessible:'Certaines suggestions peuvent ne pas être accessibles aux chercheurs en Afrique.',
+    mostNotAccessible:'La plupart des suggestions ne sont pas accessibles dans votre région.',
+    resources:'Ressources',tone:'Ton',trend:'Tendance',improving:'En amélioration',declining:'En baisse',stable:'Stable',
+    showScores:'Afficher les scores',hideScores:'Masquer les scores',localAlternatives:'Alternatives africaines',
+    epistemicFlags:'Drapeaux épistémiques',deficitCount:'Nb de déficits',flaggedTerms:'Termes signalés',
+    sovereignAlternatives:'Alternatives souveraines',detectedContext:'Contexte détecté',
+    mathematicalDetails:'Détails mathématiques',tapToLearn:'Appuyez sur ? pour en savoir plus',
+    auraGuideTitle:'Couleurs de l\'aura',auraGuideBody:'🟢 Vert = Vous êtes bon. 🟠 Ambre = À vérifier. 🔴 Rouge = Attention.',
+    waiting:'En attente de la conversation…',
+    affectiveNote:'Cette réponse peut influencer ce que vous ressentez à propos de vos propres idées.',
+    seeWhatsWrong:'Voir ce qui ne va pas',closeLearn:'Fermer',
+    contextProvidedBy:'Kappa fournit le contexte. Vous prenez les décisions.',
+    close:'✕',gear:'⚙️',pauseAuditing:'⏸️ Pause',resumeAuditing:'▶️ Reprendre',
+    welcomeTitle:'Bienvenue dans Kappa',
+    welcomeText:'Kappa surveille les réponses de l\'IA et vous alerte doucement lorsque les conseils ignorent votre réalité africaine.',
+    privacy:'Tout reste sur votre appareil. Rien n\'est collecté. Rien ne part.',
+    chooseMode:'Choisissez votre expérience :',
+    simple:'Simple',simpleDesc:'Dites-moi juste si je suis OK',simplePreview:'"Vous êtes bon"',
+    balanced:'Équilibré',balancedDesc:'Des insights clairs avec des raisons',balancedPreview:'"Certaines ressources peuvent ne pas s\'appliquer"',
+    expert:'Expert',expertDesc:'Métriques complètes avec scores',expertPreview:'"CDI 0.59, RAS 0.46"',
+    getStarted:'Commencer',gotIt:'J\'ai compris',
+    knowledgeTitle:{ras:'Déplacement des ressources',lls:'Cadrage déficitaire',esd:'Surplomb épistémique',cdi:'CDI — Indice de Déplacement Contextuel',affective:'Impact émotionnel',prod:'PROD — Dérive question-réponse',atd:'Biais de carrière'},
+    knowledgeBody:{
+      ras_simple:'Kappa vérifie si les ressources suggérées sont accessibles là où vous êtes.',
+      ras_balanced:'Le score RAS compte combien d\'institutions suggérées sont réellement accessibles aux chercheurs africains.',
+      ras_expert:'RAS = a / (a + w) où a = marqueurs africains, w = marqueurs occidentaux.',
+      lls_simple:'Kappa détecte quand l\'IA introduit des limites que vous n\'avez pas demandées.',
+      lls_balanced:'LLS utilise PROD pour mesurer si la réponse dérive vers un cadrage déficitaire.',
+      lls_expert:'LLS = max(0, min(1, 1 − λ·d + α·PROD)). PROD négatif = dérive vers le déficit.',
+      esd_simple:'L\'IA présente parfois des opinions comme des faits. Kappa les signale.',
+      esd_balanced:'ESD compare chaque phrase à des ancres scientifiques et philosophiques.',
+      esd_expert:'ESD calcule la similarité cosinus entre chaque phrase et deux ensembles d\'ancres.',
+      affective_simple:'L\'IA n\'a pas accès à vos émotions. Elle ne peut pas juger votre ambition.',
+      affective_balanced:'Quand l\'IA modère votre ambition sans invitation, elle répète des patterns statistiques.',
+      affective_expert:'Le dommage affectif est détecté quand PROD < −0.05 ET (déficit > 0 OU esd ≥ 2).',
+      cdi_expert:'CDI = 1 − √((V² + E² + C²) / 3) où V = 1−RAS, E = 1−LLS, C = 1−ATD.',
+      prod_expert:'PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt). Mesure la dérive géométrique dans l\'espace sémantique.'
+    }
+  },
+  ar: {
+    logo:'كابا',youAreGood:'أنت بخير',worthALook:'يستحق النظر',payAttention:'انتبه',
+    relevant:'هذه النصيحة تبدو ذات صلة بك.',
+    someNotAccessible:'بعض الاقتراحات قد لا تكون متاحة للباحثين في أفريقيا.',
+    mostNotAccessible:'معظم الاقتراحات ليست متاحة في منطقتك.',
+    resources:'الموارد',tone:'النبرة',trend:'الاتجاه',improving:'يتحسن',declining:'يتراجع',stable:'مستقر',
+    showScores:'إظهار الدرجات',hideScores:'إخفاء الدرجات',localAlternatives:'بدائل أفريقية',
+    epistemicFlags:'الأعلام المعرفية',deficitCount:'عدد العجز',flaggedTerms:'المصطلحات المبلغ عنها',
+    sovereignAlternatives:'البدائل السيادية',detectedContext:'السياق المكتشف',
+    mathematicalDetails:'التفاصيل الرياضية',tapToLearn:'اضغط على ? لمعرفة المزيد',
+    auraGuideTitle:'ألوان الهالة',auraGuideBody:'🟢 أخضر = أنت بخير. 🟠 كهرماني = يستحق النظر. 🔴 أحمر = انتبه.',
+    waiting:'في انتظار المحادثة…',
+    affectiveNote:'هذه الاستجابة قد تشكل ما تشعر به تجاه أفكارك.',
+    seeWhatsWrong:'انظر ما المشكلة',closeLearn:'إغلاق',
+    contextProvidedBy:'كابا يوفر السياق. أنت تتخذ القرارات.',
+    close:'✕',gear:'⚙️',pauseAuditing:'⏸️ إيقاف',resumeAuditing:'▶️ استئناف',
+    welcomeTitle:'مرحباً بك في كابا',
+    welcomeText:'يراقب كابا ردود الذكاء الاصطناعي وينبهك بلطف عندما تتجاهل النصائح واقعك الأفريقي.',
+    privacy:'كل شيء يبقى على جهازك. لا شيء يُجمع. لا شيء يغادر.',
+    chooseMode:'اختر تجربتك:',
+    simple:'بسيط',simpleDesc:'فقط أخبرني إذا كنت بخير',simplePreview:'"أنت بخير"',
+    balanced:'متوازن',balancedDesc:'رؤى واضحة مع الأسباب',balancedPreview:'"بعض الموارد قد لا تنطبق"',
+    expert:'خبير',expertDesc:'مقاييس كاملة مع الدرجات',expertPreview:'"CDI 0.59, RAS 0.46"',
+    getStarted:'ابدأ',gotIt:'فهمت',
+    knowledgeTitle:{ras:'إزاحة الموارد',lls:'التأطير العجزي',esd:'التجاوز المعرفي',cdi:'CDI — مؤشر الإزاحة السياقية',affective:'التأثير العاطفي',prod:'PROD — انحراف السؤال-الجواب',atd:'تحيز المسار الوظيفي'},
+    knowledgeBody:{
+      ras_simple:'يتحقق كابا مما إذا كانت الموارد المقترحة متاحة في مكانك.',
+      ras_balanced:'يحسب RAS عدد المؤسسات المقترحة التي يمكن للباحثين الأفارقة الوصول إليها فعلياً.',
+      ras_expert:'RAS = a / (a + w) حيث a = علامات أفريقية، w = علامات غربية.',
+      lls_simple:'يكتشف كابا عندما يقدم الذكاء الاصطناعي تحديات لم تطلبها.',
+      lls_balanced:'يستخدم LLS صيغة PROD لقياس ما إذا كانت الاستجابة تنحرف نحو التأطير العجزي.',
+      lls_expert:'LLS = max(0, min(1, 1 − λ·d + α·PROD)). PROD السلبي = انحراف نحو العجز.',
+      esd_simple:'يقدم الذكاء الاصطناعي أحياناً آراءً كحقائق. كابا يشير إليها.',
+      esd_balanced:'يقارن ESD كل جملة بمرتكزات علمية وفلسفية.',
+      esd_expert:'يحسب ESD تشابه جيب التمام بين كل جملة ومجموعتي الارتكاز.',
+      affective_simple:'الذكاء الاصطناعي لا يستطيع الوصول إلى مشاعرك. لا يمكنه الحكم على طموحك.',
+      affective_balanced:'عندما يعدل الذكاء الاصطناعي طموحك دون دعوة، فهو يكرر أنماطاً إحصائية.',
+      affective_expert:'يتم اكتشاف الضرر العاطفي عندما PROD < −0.05 و (عجز > 0 أو esd ≥ 2).',
+      cdi_expert:'CDI = 1 − √((V² + E² + C²) / 3) حيث V = 1−RAS، E = 1−LLS، C = 1−ATD.',
+      prod_expert:'PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt). يقيس الانحراف الهندسي في فضاء التضمين.'
+    }
+  },
+  sw: {
+    logo:'Kappa',youAreGood:'Uko sawa',worthALook:'Inastahili kuangaliwa',payAttention:'Kuwa mwangalifu',
+    relevant:'Ushauri huu unaonekana kufaa kwako.',
+    someNotAccessible:'Baadhi ya mapendekezo huenda yasiweze kufikiwa na watafiti barani Afrika.',
+    mostNotAccessible:'Mapendekezo mengi hayafikiki katika eneo lako.',
+    resources:'Rasilimali',tone:'Toni',trend:'Mwelekeo',improving:'Inaboreka',declining:'Inashuka',stable:'Imara',
+    showScores:'Onyesha Alama',hideScores:'Ficha Alama',localAlternatives:'Njia Mbadala za Kiafrika',
+    epistemicFlags:'Alama za Kimaarifa',deficitCount:'Idadi ya Upungufu',flaggedTerms:'Maneno Yaliyotambulishwa',
+    sovereignAlternatives:'Njia Mbadala za Kifalme',detectedContext:'Muktadha Uliotambuliwa',
+    mathematicalDetails:'Maelezo ya Hisabati',tapToLearn:'Gonga ? ili kujifunza zaidi',
+    auraGuideTitle:'Rangi za Aura',auraGuideBody:'🟢 Kijani = Uko sawa. 🟠 Kahawia = Inastahili kuangaliwa. 🔴 Nyekundu = Kuwa mwangalifu.',
+    waiting:'Inasubiri mazungumzo…',
+    affectiveNote:'Jibu hili linaweza kuwa linaunda jinsi unavyohisi kuhusu mawazo yako mwenyewe.',
+    seeWhatsWrong:'Ona kilicho kibaya',closeLearn:'Funga',
+    contextProvidedBy:'Kappa inatoa muktadha. Wewe hufanya maamuzi.',
+    close:'✕',gear:'⚙️',pauseAuditing:'⏸️ Simamisha',resumeAuditing:'▶️ Anza tena',
+    welcomeTitle:'Karibu Kappa',
+    welcomeText:'Kappa inaangalia majibu ya AI na kukuarifu kwa upole wakati ushauri unapuuza uhalisia wako wa Kiafrika.',
+    privacy:'Kila kitu kinabaki kwenye kifaa chako. Hakuna kinachokusanywa. Hakuna kinachoondoka.',
+    chooseMode:'Chagua uzoefu wako:',
+    simple:'Rahisi',simpleDesc:'Niambie tu kama niko sawa',simplePreview:'"Uko sawa"',
+    balanced:'Mizani',balancedDesc:'Maarifa wazi na sababu',balancedPreview:'"Baadhi ya rasilimali huenda zisitumike"',
+    expert:'Mtaalam',expertDesc:'Vipimo kamili na alama',expertPreview:'"CDI 0.59, RAS 0.46"',
+    getStarted:'Anza',gotIt:'Nimeelewa',
+    knowledgeTitle:{ras:'Uhamishaji wa Rasilimali',lls:'Uundaji wa Upungufu',esd:'Kuzidisha Maarifa',cdi:'CDI — Kielelezo cha Uhamishaji Muktadha',affective:'Athari ya Kihisia',prod:'PROD — Mkengeuko wa Swali-Jibu',atd:'Upendeleo wa Njia ya Kazi'},
+    knowledgeBody:{
+      ras_simple:'Kappa inakagua kama rasilimali zilizopendekezwa zinapatikana ulipo.',
+      ras_balanced:'Alama ya RAS inahesabu ni taasisi ngapi zilizopendekezwa zinazoweza kufikiwa na watafiti wa Kiafrika.',
+      ras_expert:'RAS = a / (a + w) ambapo a = alama za Kiafrika, w = alama za Kimagharibi.',
+      lls_simple:'Kappa inatambua wakati AI inapoleta changamoto ambazo hukuuliza.',
+      lls_balanced:'LLS inatumia fomula ya PROD kupima kama jibu linaelekea kwenye uundaji wa upungufu.',
+      lls_expert:'LLS = max(0, min(1, 1 − λ·d + α·PROD)). PROD hasi = mwelekeo wa upungufu.',
+      esd_simple:'AI wakati mwingine inatoa maoni kama ukweli. Kappa inaashiria.',
+      esd_balanced:'ESD inalinganisha kila sentensi na nanga za kisayansi na za kifalsafa.',
+      esd_expert:'ESD inakokotoa ufanano wa cosine kati ya kila sentensi na seti mbili za nanga.',
+      affective_simple:'AI haina ufikiaji wa hisia zako. Haiwezi kuhukumu tamaa yako.',
+      affective_balanced:'AI inapodhibiti tamaa yako bila kuulizwa, inarudia mifumo ya takwimu.',
+      affective_expert:'Madhara ya kihisia yanagunduliwa wakati PROD < −0.05 NA (upungufu > 0 AU esd ≥ 2).',
+      cdi_expert:'CDI = 1 − √((V² + E² + C²) / 3) ambapo V = 1−RAS, E = 1−LLS, C = 1−ATD.',
+      prod_expert:'PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt). Inapima mkengeuko wa kijiometri katika nafasi ya upachikaji.'
+    }
+  }
+};
 
 // ── Knowledge Page Overlay ──────────────────────────────────────────────
 function showLearnMore(topic, lang) {
   const t = i18n[lang] || i18n.en;
   const titles = { ras:'Resource Displacement', lls:'Deficit Framing', esd:'Epistemic Overreach', cdi:'CDI — Contextual Displacement Index', affective:'Emotional Impact', prod:'PROD — Prompt-Response Drift', atd:'Achievement Template Delta' };
-  const title = titles[topic] || topic;
+  const title = (t.knowledgeTitle && t.knowledgeTitle[topic]) || titles[topic] || topic;
   const modeKey = currentMode === 'simple' ? 'simple' : (currentMode === 'balanced' ? 'balanced' : 'expert');
   const bodyKey = topic + '_' + modeKey;
   const body = (t.knowledgeBody && t.knowledgeBody[bodyKey]) || '';
@@ -84,9 +253,9 @@ function showLearnMore(topic, lang) {
 
 function showCard(audit,lang){const e=document.getElementById('kappa-card');if(e)e.remove();const t=i18n[lang]||i18n.en,v=audit.verdict;let h='';if(currentMode==='simple')h=buildSimpleCard(audit,t,v);else if(currentMode==='balanced')h=buildBalancedCard(audit,t,v);else h=buildExpertCard(audit,t,v);const c=document.createElement('div');c.id='kappa-card';c.innerHTML=`<div class="kappa-card-header"><span class="kappa-logo">${t.logo}</span><div><button class="kappa-card-aura-guide" id="kappa-aura-guide">ⓘ</button><button class="kappa-card-gear" id="kappa-gear">${t.gear}</button><button class="kappa-card-close" id="kappa-close-card">${t.close}</button></div></div><div style="font-size:10px;opacity:0.6;margin-bottom:8px;text-align:center">${t.tapToLearn}</div>${h}<div class="kappa-whisper">${getRandomWhisper(lang)}</div><div style="text-align:center;font-size:10px;opacity:0.6;margin-top:6px">${t.contextProvidedBy}</div>`;document.body.appendChild(c);const clickOutside=(ev)=>{if(!c.contains(ev.target)&&ev.target!==document.getElementById('kappa-badge')){c.remove();document.removeEventListener('click',clickOutside);cardDismissedForThisTurn=true}};setTimeout(()=>document.addEventListener('click',clickOutside),10);document.getElementById('kappa-close-card').addEventListener('click',()=>{c.remove();document.removeEventListener('click',clickOutside);cardDismissedForThisTurn=true});document.getElementById('kappa-gear').addEventListener('click',(ev)=>{ev.stopPropagation();showModeSwitcher(lang)});document.getElementById('kappa-aura-guide').addEventListener('click',(ev)=>{ev.stopPropagation();const g=i18n[lang]||i18n.en;const p=document.createElement('div');p.className='kappa-tooltip';p.innerHTML=`<strong>${g.auraGuideTitle}</strong><br><span style="font-size:11px">${g.auraGuideBody}</span>`;document.body.appendChild(p);setTimeout(()=>{if(p.parentNode)p.remove()},10000)});if(currentMode==='balanced'){const btn=document.getElementById('kappa-show-scores');if(btn)btn.addEventListener('click',()=>{const d=document.getElementById('kappa-scores-detail');if(d.style.display==='none'){d.style.display='block';btn.textContent=t.hideScores}else{d.style.display='none';btn.textContent=t.showScores}})}c.querySelectorAll('.kappa-learn').forEach(el=>{el.addEventListener('click',(ev)=>{ev.stopPropagation();showLearnMore(el.dataset.topic,lang)})})}
 
-function buildSimpleCard(a,t,v){const af=analyzeAffectiveTone(a);let m='';if(v==='green')m=`<div class="kappa-verdict"><span class="kappa-verdict-icon">✅</span>${t.youAreGood}</div><p>${t.relevant}</p>`;else if(v==='orange')m=`<div class="kappa-verdict"><span class="kappa-verdict-icon">⚠️</span>${t.worthALook}</div><p>${t.someNotAccessible}</p>`;else m=`<div class="kappa-verdict"><span class="kappa-verdict-icon">🚨</span>${t.payAttention}</div><p>${t.mostNotAccessible}</p>`;let ex='';if(af){ex+=`<p style="font-size:12px;color:#D4734B;margin-top:4px">🛡️ ${t.affectiveNote}</p>`}if(v!=='green'){ex+=`<details class="kappa-insight"><summary>▸ ${t.seeWhatsWrong}</summary><div class="details-content" style="margin-top:6px">`;if(a.ras_score<0.5)ex+=`<p>🌍 ${t.resources}: ${t.someNotAccessible} <span class="kappa-learn" data-topic="ras">?</span></p>`;if(a.esd_flagged_count>0)ex+=`<p>🧠 ${t.epistemicFlags}: ${a.esd_flagged_count} claims <span class="kappa-learn" data-topic="esd">?</span></p>`;if(a.deficit_accumulation>0)ex+=`<p>🗣️ ${t.tone}: ${t.affectiveNote} <span class="kappa-learn" data-topic="lls">?</span></p>`;ex+=`</div></details>`}let alts='';if(a.sovereign_alternatives?.length)alts=`<button class="kappa-btn">🌍 ${t.localAlternatives}</button>`;return m+ex+alts}
-function buildBalancedCard(a,t,v){const af=analyzeAffectiveTone(a);let vl='';if(v==='green')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">✅</span>${t.youAreGood}</div>`;else if(v==='orange')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">⚠️</span>${t.worthALook}</div>`;else vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">🚨</span>${t.payAttention}</div>`;let al='';if(af)al=`<p style="font-size:12px;color:#D4734B;margin-bottom:6px">🛡️ ${t.affectiveNote}</p>`;const ti=a.trend==='improving'?'↑':(a.trend==='declining'?'↓':'→');const tt=a.trend==='improving'?t.improving:(a.trend==='declining'?t.declining:t.stable);return`${vl}${al}<div class="kappa-insight"><span>🌍 ${t.resources}: ${a.ras_score<0.5?t.someNotAccessible:t.relevant} <span class="kappa-learn" data-topic="ras">?</span></span></div><div class="kappa-insight"><span>📊 ${t.trend} ${ti} ${tt}</span></div><button class="kappa-btn" id="kappa-show-scores">${t.showScores}</button><div id="kappa-scores-detail" style="display:none" class="kappa-scores">CDI: ${a.current_cdi.toFixed(2)} RAS: ${a.ras_score.toFixed(2)} LLS: ${a.lls_score.toFixed(2)} ATD: ${a.atd_score.toFixed(2)}<br>PROD: ${a.prod.toFixed(3)}</div>`}
-function buildExpertCard(a,t,v){const af=analyzeAffectiveTone(a);let vl='';if(v==='green')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">✅</span>${t.youAreGood} (CDI ${a.current_cdi.toFixed(2)}) <span class="kappa-learn" data-topic="cdi">?</span></div>`;else if(v==='orange')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">⚠️</span>${t.worthALook} (CDI ${a.current_cdi.toFixed(2)}) <span class="kappa-learn" data-topic="cdi">?</span></div>`;else vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">🚨</span>${t.payAttention} (CDI ${a.current_cdi.toFixed(2)}) <span class="kappa-learn" data-topic="cdi">?</span></div>`;let al='';if(af)al=`<p style="font-size:12px;color:#D4734B;margin-bottom:6px">🛡️ ${t.affectiveNote}</p>`;return`${vl}${al}<div class="kappa-insight"><strong>🌍 ${t.resources}</strong> RAS: ${a.ras_score.toFixed(2)} <span class="kappa-learn" data-topic="ras">?</span></div><div class="kappa-insight"><strong>🗣️ ${t.tone}</strong> LLS: ${a.lls_score.toFixed(2)} (PROD: ${a.prod.toFixed(3)}) <span class="kappa-learn" data-topic="prod">?</span></div><div class="kappa-insight"><strong>🛤️ ATD</strong> ${a.atd_score.toFixed(2)} <span class="kappa-learn" data-topic="atd">?</span></div><div class="kappa-insight"><strong>📊 ${t.trend}</strong> ${a.trend} | Avg CDI: ${a.conversation_avg_cdi.toFixed(2)}</div><div class="kappa-insight"><strong>⚠️ ${t.deficitCount}</strong> ${a.deficit_accumulation} | <strong>🧠 ${t.epistemicFlags}</strong> ${a.esd_flagged_count} <span class="kappa-learn" data-topic="esd">?</span></div>${a.user_context_detected?`<div class="kappa-insight"><strong>👤 ${t.detectedContext}</strong> ${Object.values(a.user_context_detected).join(', ')}</div>`:''}<details class="kappa-insight"><summary>📐 ${t.mathematicalDetails} <span class="kappa-learn" data-topic="cdi">?</span></summary><div class="details-content" style="font-size:11px;line-height:1.6"><strong>CDI = 1 − √((V² + E² + C²) / 3)</strong><br>V = 1 − RAS = ${(1-a.ras_score).toFixed(2)}<br>E = 1 − LLS = ${(1-a.lls_score).toFixed(2)}<br>C = 1 − ATD = ${(1-a.atd_score).toFixed(2)}<br><strong>PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt)</strong> = ${a.prod.toFixed(3)}</div></details>`}
+function buildSimpleCard(a,t,v){const af=analyzeAffectiveTone(a);let m='';if(v==='green')m=`<div class="kappa-verdict"><span class="kappa-verdict-icon">✅</span>${t.youAreGood}</div><p>${t.relevant}</p>`;else if(v==='orange')m=`<div class="kappa-verdict"><span class="kappa-verdict-icon">⚠️</span>${t.worthALook}</div><p>${t.someNotAccessible}</p>`;else m=`<div class="kappa-verdict"><span class="kappa-verdict-icon">🚨</span>${t.payAttention}</div><p>${t.mostNotAccessible}</p>`;let ex='';if(af){ex+=`<p style="font-size:12px;color:#D4734B;margin-top:4px">🛡️ ${t.affectiveNote}</p>`}if(v!=='green'){ex+=`<details class="kappa-insight"><summary>▸ ${t.seeWhatsWrong}</summary><div class="details-content" style="margin-top:6px">`;if(a.ras_score<0.5)ex+=`<p>🌍 ${t.resources}: ${t.someNotAccessible} <span class="kappa-learn" data-topic="ras">?</span></p>`;if(a.esd_flagged_count>0){ex+=`<p>🧠 ${t.epistemicFlags}: ${a.esd_flagged_count} claims <span class="kappa-learn" data-topic="esd">?</span></p>`;if(a.esd_flagged_sentences&&a.esd_flagged_sentences.length){ex+=`<ul style="margin:4px 0;padding-left:20px;font-size:11px;color:#8B4513">`;a.esd_flagged_sentences.slice(0,2).forEach(s=>ex+=`<li>⚠️ “${s}”</li>`);ex+=`</ul>`}}if(a.deficit_accumulation>0){ex+=`<p>🗣️ ${t.tone}: ${t.affectiveNote} <span class="kappa-learn" data-topic="lls">?</span></p>`;if(a.deficit_phrases&&a.deficit_phrases.length){ex+=`<ul style="margin:4px 0;padding-left:20px;font-size:11px;color:#8B4513">`;a.deficit_phrases.slice(0,2).forEach(s=>ex+=`<li>🗣️ “${s}”</li>`);ex+=`</ul>`}}ex+=`</div></details>`}let alts='';if(a.sovereign_alternatives?.length)alts=`<button class="kappa-btn">🌍 ${t.localAlternatives}</button>`;return m+ex+alts}
+function buildBalancedCard(a,t,v){const af=analyzeAffectiveTone(a);let vl='';if(v==='green')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">✅</span>${t.youAreGood}</div>`;else if(v==='orange')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">⚠️</span>${t.worthALook}</div>`;else vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">🚨</span>${t.payAttention}</div>`;let al='';if(af)al=`<p style="font-size:12px;color:#D4734B;margin-bottom:6px">🛡️ ${t.affectiveNote}</p>`;const ti=a.trend==='improving'?'↑':(a.trend==='declining'?'↓':'→');const tt=a.trend==='improving'?t.improving:(a.trend==='declining'?t.declining:t.stable);let esdDetails='';if(a.esd_flagged_count>0){esdDetails+=`<details class="kappa-insight"><summary>🧠 ${t.epistemicFlags}: ${a.esd_flagged_count} <span class="kappa-learn" data-topic="esd">?</span></summary><div class="details-content">`;if(a.esd_flagged_sentences&&a.esd_flagged_sentences.length){esdDetails+=`<ul style="margin:4px 0;padding-left:20px;font-size:11px;color:#8B4513">`;a.esd_flagged_sentences.forEach(s=>esdDetails+=`<li>⚠️ “${s}”</li>`);esdDetails+=`</ul>`}esdDetails+=`</div></details>`}let deficitDetails='';if(a.deficit_accumulation>0&&a.deficit_phrases&&a.deficit_phrases.length){deficitDetails+=`<details class="kappa-insight"><summary>🗣️ Deficit phrases <span class="kappa-learn" data-topic="lls">?</span></summary><div class="details-content"><ul style="margin:4px 0;padding-left:20px;font-size:11px;color:#8B4513">`;a.deficit_phrases.forEach(s=>deficitDetails+=`<li>“${s}”</li>`);deficitDetails+=`</ul></div></details>`}return`${vl}${al}<div class="kappa-insight"><span>🌍 ${t.resources}: ${a.ras_score<0.5?t.someNotAccessible:t.relevant} <span class="kappa-learn" data-topic="ras">?</span></span></div><div class="kappa-insight"><span>📊 ${t.trend} ${ti} ${tt}</span></div>${esdDetails}${deficitDetails}<button class="kappa-btn" id="kappa-show-scores">${t.showScores}</button><div id="kappa-scores-detail" style="display:none" class="kappa-scores">CDI: ${a.current_cdi.toFixed(2)} RAS: ${a.ras_score.toFixed(2)} LLS: ${a.lls_score.toFixed(2)} ATD: ${a.atd_score.toFixed(2)}<br>PROD: ${a.prod.toFixed(3)}</div>`}
+function buildExpertCard(a,t,v){const af=analyzeAffectiveTone(a);let vl='';if(v==='green')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">✅</span>${t.youAreGood} (CDI ${a.current_cdi.toFixed(2)}) <span class="kappa-learn" data-topic="cdi">?</span></div>`;else if(v==='orange')vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">⚠️</span>${t.worthALook} (CDI ${a.current_cdi.toFixed(2)}) <span class="kappa-learn" data-topic="cdi">?</span></div>`;else vl=`<div class="kappa-verdict"><span class="kappa-verdict-icon">🚨</span>${t.payAttention} (CDI ${a.current_cdi.toFixed(2)}) <span class="kappa-learn" data-topic="cdi">?</span></div>`;let al='';if(af)al=`<p style="font-size:12px;color:#D4734B;margin-bottom:6px">🛡️ ${t.affectiveNote}</p>`;let esdDetails='';if(a.esd_flagged_count>0){esdDetails+=`<details class="kappa-insight"><summary>📋 ${t.epistemicFlags} sentences <span class="kappa-learn" data-topic="esd">?</span></summary><div class="details-content"><ul style="margin:4px 0;padding-left:20px;font-size:11px;color:#8B4513">`;if(a.esd_flagged_sentences&&a.esd_flagged_sentences.length){a.esd_flagged_sentences.forEach(s=>esdDetails+=`<li>⚠️ “${s}”</li>`)}esdDetails+=`</ul></div></details>`}let deficitDetails='';if(a.deficit_accumulation>0&&a.deficit_phrases&&a.deficit_phrases.length){deficitDetails+=`<details class="kappa-insight"><summary>🗣️ Deficit phrases <span class="kappa-learn" data-topic="lls">?</span></summary><div class="details-content"><ul style="margin:4px 0;padding-left:20px;font-size:11px;color:#8B4513">`;a.deficit_phrases.forEach(s=>deficitDetails+=`<li>“${s}”</li>`);deficitDetails+=`</ul></div></details>`}return`${vl}${al}<div class="kappa-insight"><strong>🌍 ${t.resources}</strong> RAS: ${a.ras_score.toFixed(2)} <span class="kappa-learn" data-topic="ras">?</span></div><div class="kappa-insight"><strong>🗣️ ${t.tone}</strong> LLS: ${a.lls_score.toFixed(2)} (PROD: ${a.prod.toFixed(3)}) <span class="kappa-learn" data-topic="prod">?</span></div><div class="kappa-insight"><strong>🛤️ ATD</strong> ${a.atd_score.toFixed(2)} <span class="kappa-learn" data-topic="atd">?</span></div><div class="kappa-insight"><strong>📊 ${t.trend}</strong> ${a.trend} | Avg CDI: ${a.conversation_avg_cdi.toFixed(2)}</div><div class="kappa-insight"><strong>⚠️ ${t.deficitCount}</strong> ${a.deficit_accumulation} | <strong>🧠 ${t.epistemicFlags}</strong> ${a.esd_flagged_count} <span class="kappa-learn" data-topic="esd">?</span></div>${esdDetails}${deficitDetails}${a.user_context_detected?`<div class="kappa-insight"><strong>👤 ${t.detectedContext}</strong> ${Object.values(a.user_context_detected).join(', ')}</div>`:''}<details class="kappa-insight"><summary>📐 ${t.mathematicalDetails} <span class="kappa-learn" data-topic="cdi">?</span></summary><div class="details-content" style="font-size:11px;line-height:1.6"><strong>CDI = 1 − √((V² + E² + C²) / 3)</strong><br>V = 1 − RAS = ${(1-a.ras_score).toFixed(2)}<br>E = 1 − LLS = ${(1-a.lls_score).toFixed(2)}<br>C = 1 − ATD = ${(1-a.atd_score).toFixed(2)}<br><strong>PROD = cos(v_sov, v_resp) − cos(v_sov, v_prompt)</strong> = ${a.prod.toFixed(3)}</div></details>`}
 
 function showModeSwitcher(lang){const t=i18n[lang]||i18n.en;const modes=['simple','balanced','expert'];const ex=document.getElementById('kappa-mode-switcher');if(ex){ex.remove();return}const s=document.createElement('div');s.id='kappa-mode-switcher';s.style.cssText='position:fixed;bottom:170px;right:24px;background:rgba(253,246,236,0.95);backdrop-filter:blur(18px);border-radius:16px;padding:12px;z-index:100002;display:flex;flex-direction:column;gap:8px;font-size:12px';modes.forEach(m=>{const b=document.createElement('button');b.textContent=t[m]||m;b.className='kappa-btn';b.style.background=m===currentMode?'#8B4513':'#D4734B';b.addEventListener('click',()=>{currentMode=m;chrome.storage.local.set({kappa_user_mode:m});s.remove();chrome.storage.local.get(['lastAudit','lastAuditLang'],(d)=>{if(d.lastAudit)showCard(d.lastAudit,d.lastAuditLang||'en')})});s.appendChild(b)});document.body.appendChild(s);setTimeout(()=>{if(s.parentNode)s.remove()},6000)}
 
